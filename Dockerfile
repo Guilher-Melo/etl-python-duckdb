@@ -12,5 +12,7 @@ COPY pipeline_02.py .
 # Instala as dependências especificadas no requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
+EXPOSE 8501
+
 # Comando para executar o arquivo de pipeline
-CMD ["python", "app.py"]
+CMD ["streamlit", "run", "app.py", "--server.port", "8501"]

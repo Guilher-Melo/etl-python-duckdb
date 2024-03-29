@@ -8,6 +8,7 @@ WORKDIR /app
 COPY requirements.txt .
 COPY app.py .
 COPY pipeline_02.py .
+COPY /pasta_gdown .
 
 # Instala as dependências especificadas no requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
